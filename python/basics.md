@@ -173,7 +173,7 @@
 
 #### 반복문
 
-- enumerate
+- `enumerate`
 
   - (index, value) 형태의 tuple로 구성된 열거 객체를 반환
 
@@ -182,5 +182,5 @@
       print(idx, member)
   ```
 
-  
+  - `enumerate(list, start=)`을 통해 원하는 숫자부터 인덱스를 셀 수 있음
 
