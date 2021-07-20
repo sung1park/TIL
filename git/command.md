@@ -20,7 +20,7 @@
 - 프로젝트 단위에서 실행
 
 ```bash
-git init
+$ git init
 ```
 
 
@@ -41,7 +41,7 @@ $ git config --global user.name <username>
 - 현재 git이 관리하고 있는 파일들의 상태를 보여주는 명령어
 
 ```bash 
-git status
+$ git status
 ```
 
 
@@ -51,7 +51,7 @@ git status
 - 커밋의 히스토리를 보여주는 명령어
 
 ```bash
-git log
+$ git log
 ```
 
 
@@ -64,8 +64,8 @@ git log
   - `.` : 현재 폴더, 하위 폴더, 하위 파일 모두 
 
 ```bash
-git add <filename>
-# git add .
+$ git add <filename>
+# $ git add .
 ```
 
 
@@ -75,7 +75,7 @@ git add <filename>
 - staging area에 올라온 파일들을 하나의 커밋으로 만들어 주는(스냅샷 찍는) 명령어
 
 ```bash
-git commit -m "commit message"
+$ git commit -m "commit message"
 ```
 
 
@@ -88,7 +88,7 @@ git commit -m "commit message"
   - nickname에는 일반적으로 `origin`
 
 ```bash
-git remote add <nickname> <url>
+$ git remote add <nickname> <url>
 ```
 
 
@@ -98,6 +98,22 @@ git remote add <nickname> <url>
 - 원격 저장소로 로컬의 커밋 기록을 업로드하는 명령어
 
 ```bash
-git push <nickname> <branch name>
+$ git push <nickname> <branch name>
+```
+
+
+
+##### clone
+
+```bash
+$ git clone <repository link>
+```
+
+
+
+#####  pull
+
+```bash
+$ git pull origin master
 ```
 
