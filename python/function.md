@@ -138,29 +138,3 @@ my_info(x, y, *args, **kwargs) # Right
   - 가급적 사용하지 않는 것을 권장하며, 함수로 값을 바꾸고자 한다면 항상 인자로 넘기고 리턴 값을 사용하는 것을 추천
 
 
-
-### 재귀함수
-
-- fibonacci 예제
-
-```python
-# 재귀
-def fibo(n):
-    # base case
-    if n < 2:
-        return n
-    else:
-        return fib(n-1) + fib(n-2)
-
-# 반복
-def fibo_for(n):
-    if n < 2:
-        return n
-    
-    a, b = 0, 1
-    
-    for i in range(n-1):
-        a, b = b, a+b
-    return b
-```
-
