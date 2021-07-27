@@ -68,6 +68,36 @@
 - `finally`
   -  예외 발생 여부와 관계없이 항상 실행함
 
+```python
+try:
+    f = open('nooofile.txt')
+except FileNotFoundError:
+    print('해당 파일이 없습니다.')
+else:
+    print('파일을 읽기 시작합니다.')
+    print(f.read())
+    print('파일을 모두 읽었습니다.')
+    f.close()
+finally:
+    print('파일 읽기를 종료합니다.')
+```
+
+
+
+- Exception은 가장 큰 범주의 예외
+
+```python
+try:
+    num = input('값을 입력하시오: ')
+    100/int(num)
+except Exception:
+    print('에러는 모르지만 에러가 발생하였습니다.')
+except ValueError:
+    print('숫자를 입력하세요.')
+```
+
+
+
 
 
 ##### 에러 메시지 처리
