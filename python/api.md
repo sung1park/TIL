@@ -24,3 +24,13 @@
 response = request.get(url).json()
 ```
 
+
+
+### requests 모듈
+
+- `params=`, `headers=` 에 `dict`형태로 패러미터와 헤더를 입력하여 요청할 수 있다.
+
+```python
+requests.get(url, params=payload, headers=headers)
+```
+
