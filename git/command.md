@@ -70,6 +70,16 @@ $ git add <filename>
 
 
 
+##### restore
+
+- stage 되어있는 파일들을 빼는 명령어
+
+```bash
+$ git restore --staged <file>
+```
+
+
+
 ##### commit
 
 - staging area에 올라온 파일들을 하나의 커밋으로 만들어 주는(스냅샷 찍는) 명령어
@@ -116,4 +126,6 @@ $ git clone <repository link>
 ```bash
 $ git pull origin master
 ```
+
+
 
