@@ -2,20 +2,20 @@
 
 ## RDBMS
 
-- 관계형 데이터베이스 시스템
+- 관계형 데이터베이스 시스템 (Oracle, MySQL, MsSQL, ...)
 
 - 테이블 기반 DBMS
   - 데이터를 테이블 단위로 관리
     - 하나의 테이블은 여러개의 컬럼으로 구성
   - 중복 데이터를 최소화 시킴 - '정규화'
     - 같은 데이터가 여러 컬럼 또는 테이블에 존재하는 경우 데이터 수정 시 문제 발생 가능성 높아짐
-  - 여러 테이블에 분산되어 있는 데이터를 검색 시 테이블 간의 관계(`join`)를 이용하여 필요한 데이터를 검색
+  - 여러 테이블에 분산되어 있는 데이터 검색 시 테이블 간의 관계(`join`)를 이용하여 필요한 데이터를 검색
 
 
 
 ## SQL (Structured Query Language)
 
-![image-20210907003555839](01_rdbms_sql.assets/image-20210907003555839.png)
+![image-20210907003555839](til_database_assets/image-20210907003555839.png)
 
 #### 정의
 
@@ -29,35 +29,26 @@
 
 - DML (Data Manipulation Language)
   - 테이블에 새로운 행을 입력, 기존의 행을 변경하고 제거
-  - INSERT
-  - UPDATE
-  - DELETE
-  - SELECT
+  - `INSERT`, `SELECT`, `UPDATE`, `DELETE`
 - DDL (Data Definition Language)
   - 데이터 구조를 생성, 변경, 제거
-  - CREATE
-  - ALTER
-  - DROP
-  - RENAME
+  - `CREATE`, `ALTER`, `DROP`, `RENAME`
 - DCL (Data Control Language)
   - 데이터 베이스와 구조에 대한 접근 권한을 제공하거나 제거 
-  - GRANT
-  - REVOKE
+  - `GRANT`, `REVOKE`
 - 관리
-  - COMMIT     : 실행한 Query를 최종적으로 적용
-  - ROLLBACK : 실행한 Query를 마지막 commit 전으로 취소시켜 데이터를 복구
+  - `COMMIT`     : 실행한 Query를 최종적으로 적용
+  - `ROLLBACK` : 실행한 Query를 마지막 `commit` 전으로 취소시켜 데이터를 복구
 
 
 
 #### DDL
 
 - 데이터베이스 생성
-  - collation : 저장된 값들을 비교할 때 사용하는 규칙의 집합
-  - utf8mb4, utf8mb4_general_ci : 다국어 처리 + 이모지
 
 ```mysql
-create database <database name>;
-
+# collation : 저장된 값들을 비교할 때 사용하는 규칙의 집합
+# utf8mb4, utf8mb4_general_ci : 다국어 처리 + 이모지
 create database <database name>
 default character set <value> collate <value>;
 ```
@@ -85,16 +76,10 @@ use <database name>
 
 #### Data type
 
-- 문자형
-  - CHAR
-  - VARCHAR
-  - TEXT
-- 숫자형
-  - INT
-- 날짜형
-  - DATETIME
-  - TIMESTAMP
-- 이진 데이터
+- 문자형 `CHAR`, `VARCHAR`, `TEXT`
+- 숫자형 `INT`
+- 날짜형 `DATETIME`, `TIMESTAMP`
+- 이진 데이터 `BINARY`
 
 
 
@@ -126,20 +111,12 @@ create table <table name> (
 - INSERT
 
 ```mysql
-INSERT INTO <table name>
-VALUES (col_val1, col_val2, ..., col_valN)
-
-INSERT INTO <table name> (col_val1, col_val2, ..., col_valN)
-VALUES  (col_val1, col_val2, ..., col_valN)
-
 INSERT INTO <table name> (col_val1, col_val2, ..., col_valN)
 VALUES  (col_val1, col_val2, ..., col_valN),
 		(col_val1, col_val2, ..., col_valN);
 ```
 
 - UPDATE
-  - WHERE절의 conditions를 만족하는 레코드 값을 변경
-  - WHERE절을 생략하면 모든 데이터가 바뀜
 
 ```mysql
 UPDATE <table name>
@@ -148,7 +125,6 @@ WHERE conditions;
 ```
 
 - DELETE
-  - 마찬가지로 WHERE절을 생략하면 모든 데이터가 바뀜
 
 ```mys
 DELETE from <table name>
@@ -292,7 +268,6 @@ from dual;
 # TO_DAYS(날짜)
 # DATE_FORMAT(날짜, '형식')
 ```
-  - 날짜 형식![image-20210907141050142](01_rdbms_sql.assets/image-20210907141050142.png)
 - 논리 관련 함수
 
 ```mysql
