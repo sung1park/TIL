@@ -15,7 +15,7 @@
 
 ## SQL (Structured Query Language)
 
-![image-20210907003555839](til_database_assets/image-20210907003555839.png)
+![image-20210907003555839](database.assets/image-20210907003555839.png)
 
 #### 정의
 
