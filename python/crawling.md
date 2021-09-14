@@ -57,3 +57,4 @@ data = BeautifulSoup(response.text, 'html.parser')
 
 1. 브라우저가 아닌 상황에서 필요 없는 데이터가 너무 많음
 2. 데이터를 얻기 위한 추후 작업이 필요함
+

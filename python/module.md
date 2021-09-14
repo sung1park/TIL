@@ -4,10 +4,38 @@
 
 - 특정 기능을 파이썬 파일(.py) 단위로 작성한 것
 
+
+
+##### import
+
+- module을 가져오는 경우 `<모듈 이름>.<메서드>()`형태로 내부 메서드를 사용할 수 있다.
+
+```python
+import <module name>
+
+<module name>.<method>()
+```
+
+- module 내부의 메서드를 가져오는 경우 기존의 함수처럼 메서드를 사용할 수 있다.
+
+```python
+from <module name> import <method name>
+from <module name> import *
+
+<method>()
+```
+
+
+
 ### 패키지
 
 - 특정 기능과 관련된 여러 모듈의 집합
-- 패키지 안에는 또 다른 서브 패키지를 포함
+- 패키지는 여러 모듈/하위 패키지로 구조화
+  - 활용 예시 : package.module
+- 모든 폴더에는 `__init__.py`를 만들어 패키지로 인식
+- 
+
+
 
 
 
