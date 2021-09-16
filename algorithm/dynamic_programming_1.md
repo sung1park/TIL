@@ -175,10 +175,10 @@ FOR w in 0->W : K[0, w] <- 0
 
 FOR i in 1->n
 	FOR w in 1->W
-		IF w_i > w
+		IF wi > w
 			K[i, w] <- K[i-1, w]
 		ELSE
-			K[i, w] <- max(v_i + K[i-1, w-w_i], K[i-1, w])
+			K[i, w] <- max(vi + K[i-1, w-wi], K[i-1, w])
 RETURN K[n, W]
 ```
 
