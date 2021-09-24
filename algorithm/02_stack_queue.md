@@ -1,5 +1,7 @@
 # Stack, Queue
 
+> 스택, 큐
+
 ## Stack
 
 #### 특성
