@@ -59,7 +59,9 @@
 
 - n위치에 있는 노드의 자식은 2n, 2n+1 위치에 존재 (heap은 일반적으로 루트 번호가 1)
 
-- java.util.PriorityQueue
+  
+
+#### java.util.PriorityQueue
 
   - 원소들의 natural ordering에 따라 heap을 유지
   - Comparable 인터페이스를 구현함으로써 기준을 세울 수 있음

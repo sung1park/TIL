@@ -1,8 +1,47 @@
 # Divide and Conquer
 
-- 분할(Divide) : 해결할 문제를 여러 개의 작은 부분으로 나눈다.
-- 정복(Conquer) : 나눈 작은 문제를 각각 해결한다.
-- 통합(Combine) : (필요하다면) 해결된 해답을 모은다.
+- Divide : 해결할 문제를 여러 개의 작은 부분으로 나눈다
+- Conquer : 나눈 작은 문제를 각각 해결한다
+- Combine : (필요하다면) 해결된 해답을 모은다
+
+
+
+#### Top-down approach
+
+![image-20211005015659069](Algorithm.assets/image-20211005015659069.png)
+
+
+
+#### 거듭 제곱
+
+```
+Power(x, n) {
+	result = 1;
+	while (x>0) {
+		if (n % 2 == 1) 
+			result = result * x;
+		
+		x = x * x;
+		n = n >> 1;
+	}
+	return result;
+}
+```
+
+```
+Recursive_Power (x, n) {
+	if (n == 1) return x;
+	if (n % 2 == 0) {
+		y = Recursive_Power(x, n/2);
+		return y * y;
+	} else {
+		y = Recursive_Power(x, (n-1)/2);
+		return y * y * x;
+	}
+}
+```
+
+
 
 
 
