@@ -17,7 +17,7 @@
 
 - 입력 : 숫자열 a1, a2, ... , an
 - LIS(i) : a1, a2, ... , ai에서 최장 부분 수열의 길이
-- Case1 : LIS(i)가 ai를 포함하지 않는다면, LIS(i) = LIS(i-1)
+- Case1 : LIS(i)가 ai를 포함하지 않는다면, LIS(i) = LIS(i-1) 
 - Case2 : LIS(i)가 ai를 포함한다면, LIS(i) = (i를 끝으로 하는 최장 부분 수열)
     - ai보다 크기가 작은 aj를 모두 검색하고 그 중 최대값을 찾아 1을 증가시켜 LIS(i)에 저장
 
