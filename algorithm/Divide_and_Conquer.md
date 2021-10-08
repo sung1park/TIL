@@ -8,7 +8,7 @@
 
 #### Top-down approach
 
-![image-20211005015659069](Algorithm.assets/image-20211005015659069.png)
+![image-20211005015659069](algorithm.assets/image-20211005015659069.png)
 
 
 
