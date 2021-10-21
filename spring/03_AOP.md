@@ -27,7 +27,7 @@
 
 ### 용어
 
-![image-20211022003832895](03_AOP.assets/image-20211022003832895.png)
+![image-20211022003832895](spring.assets/image-20211022003832895.png)
 
 ##### Aspect
 
