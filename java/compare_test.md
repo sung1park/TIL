@@ -1,10 +1,14 @@
-# compare test
+# Compare Test
+
+> java.lang.Comparable, java.util.Comparator
+>
+> 두 원소를 비교하거나 iterable 객체를 정렬할 때 기준을 세우기 위해 사용되는 인터페이스
+
+
 
 ### Comparable interface
 
-- 원소 스스로가 비교대상이 될 수 있게 기준을 잡아줌
-
-- 기준이 한 가지로 명확할 떄 사용함 (여러 기준을 적용할 수 없음)
+- 자기 자신과 다른 매개변수 객체를 비교
 
 - `int compareTo(T other)`를 재정의 해주어야 함
 
@@ -33,9 +37,7 @@
 
 ### Comparator interface
 
-- 직접 두 개를 비교할 수 있음
-
-- 기준이 두 가지 이상일 때 사용함
+- 두 매개변수 객체를 비교
 
 - `int compare(T o1, T o2)`를 재정의 해주어야 함
 

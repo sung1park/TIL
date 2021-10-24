@@ -197,7 +197,7 @@ p { color: hsla(120, 100%, 0.5); }
 
 #### box model 구성
 
-![image-20210914235212404](html_css.assets/image-20210914235212404.png)
+![image-20210914235212404](img/image-20210914235212404.png)
 
 - margin : 테두리 바깥의 외부 여백. 배경색을 지정할 수 없다.
 - border : 테두리 영역
