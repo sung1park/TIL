@@ -94,7 +94,7 @@ DI를 사용한다면 현재의 의존 객체가 아닌 다른 객체를 사용�
 
 ##### 빈 객체 얻기
 
-컨테이너가 제공하는 API를 통해 객체를 주입받는다.
+컨테이너가 제공하는 API `ClassPathXmlApplicationContext`를 통해 객체를 주입받는다.
 
 ```java
 ApplicationContext context = new ClassPathXmlApplicationContext("com/test/guestbook/controller/applicationContext.xml");
@@ -193,5 +193,5 @@ public class ApplicationConfig {
 }
 ```
 
-- 위 클래스를 configuration xml 대신 사용할 수도 있다
+- 위 클래스를 configuration xml 대신 사용할 수도 있다. 이 경우 의존 객체를 주입 받는 클래스에서는 `@Autowired` 또는 `AnnotationConfigApplicationContext` 메서드를 사용한다.
 
