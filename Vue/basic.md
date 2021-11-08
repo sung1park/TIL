@@ -72,6 +72,8 @@
 
 ![image-20211104171659932](img/image-20211104171659932.png)
 
+##### Life Cycle Hook
+
 - beforeCreate : Vue Instance가 생성되고 각 정보의 설정 전에 호출
 - created : Vue Instance가 생성된 후 데이터들의 설정이 완료된 후 호출
 - beforeMount : 마운트가 시작되기 전에 호출
@@ -83,199 +85,22 @@
 
 
 
-
-
-### Directives
-
-- 데이터 바인딩의 기본 형태는 'Mustache' 구문 `{{ <내용> }}`
-
-
-
-##### v-once
+### Vue 객체 내의 변수에 접근하기
 
 ```vue
-<span v-once>다시는 변경하지 않겠습니다. : {{ msg }}</span>
-```
-
-- 데이터 변경 시 업데이트 되지 않는 DOM을 지정
-
-
-
-##### v-text, v-html
-
-```vue
-<div id="app">
-    <!-- msg: <h2>Hello Vue!</h2> -->
-    <div v-text="'msg: ' + msg"></div>
-    <!-- Hello Vue! -->
-    <div v-html="msg"></div>
-</div>
 <script>
-	...
-    msg: '<h2>Hello Vue!</h2>'
-    ...
-</script>
-```
-
-- `v-text`는 data의 변수를 불러오지만 텍스트 그 자체로 가져옴
-- `v-html`은 data의 변수를 html로 가져옴
-
-
-
-##### v-model
-
-```vue
-<input type='text' v-model='message'>
-입력 메세지 : {{ message }}
-```
-
-- form의 input, textarea 같은 곳에 양방향 바인딩 처리를 위해 사용
-
-
-
-##### v-bind
-
-```vue
-<div id="app">
-    <a v-bind:href="link1">네이버로 가기</a>
-    <a :href="link1">네이버로 가기</a>
-    <div v-bind:[key]="value"></div>
-</div>
-<script>
-	...
-    key: 'id',
-    value: 'linkToNaver',
-    link1: 'https://www.naver.com',
-	...
-</script>
-```
-
-- data의 변수와 바인딩 처리를 위해 사용
-- 약어로 `:` 사용 가능
-- `[<attrname>]`을 통해 속성 명을 변수에서 가져올 수 있음. 이 때 속성 값도 변수에 있어야 함
-
-
-
-##### v-show
-
-```vue
-<div id="app">
-    <div v-show="isShow">{{ msg }}</div>
-</div>
-<script>
-	...
-    isShow: true,
-    msg: 'Hello!'
-    ...
-</script>
-```
-
-- `v-show="condition"`에서 조건이 true면 화면에 보이고, false면 화면에서 숨김
-- css의 `display: none`과 같이 작용
-
-
-
-##### v-if, v-else-if, v-else
-
-```vue
-<div id="app">
-    <div>
-        <span>나이: </span>
-        <input type="number" v-model="age">
-    </div>
-    <div>
-        <span>요금: </span>
-        <span v-if="age < 10">3000원</span>
-        <span v-else-if="age < 20">7000원</span>
-        <span v-else-if="age < 65">10000원</span>
-        <span v-else>무료</span>
-    </div>
-</div>
-<script>
-	...
-    	age: 0,
-    ...
-</script>
-```
-
-- `if` ~ `else if` ~ `else` 구문
-- 조건에 맞는 요소들만 보여준다는 점에서 v-show와 비슷하지만, v-show와는 다르게 조건이 false일 경우 엘리먼트를 렌더링하지 않고 조건 변경 시 삭제한다
-- template를 지원한다
-
-
-
-##### v-for
-
-```vue
-<div id="app">
-    <ul>
-        <li v-for="(item, index) in items" :key="index">
-        	{{ index }} : {{ item.key }}
-        </li>
-    </ul>
-</div>
-<script>
-	...
-    items = [
-    	item1: { key1: value1, key2, value2, ... }
+  const vm = new Vue ({
+    el: '#app',
+    data() {
+      return {
         ...
-    ]
-    ...
+      }
+    },
+    methods() {
+      ...
+    },
+  })
 </script>
 ```
 
-- key를 왜 써야 하는가?
-
-  - Vue가 예측 가능하게 작동하도록 하기 위해 (Edge case에서)
-  - https://kr.vuejs.org/v2/style-guide/#v-for-%EC%97%90-key-%EC%A7%80%EC%A0%95-%ED%95%84%EC%88%98
-
-- v-if와 v-for를 같이 쓰지 말것
-
-  - https://kr.vuejs.org/v2/style-guide/#v-if%EC%99%80-v-for%EB%A5%BC-%EB%8F%99%EC%8B%9C%EC%97%90-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EB%A7%88%EC%84%B8%EC%9A%94-%ED%95%84%EC%88%98
-
-  - Vue가 directive를 처리할 때 v-for가 v-if보다 우선순위가 높음
-
-  - 쓸데 없는 for문을 만들어 조건에 맞지 않는 항목을 삭제하다 보니 성능이 떨어짐
-
-  - 'computed' 속성을 이용하기
-
-    ```vue
-    <!-- items의 객체들 중 data의 key의 value값과 같은 객체들을 찾아냄 -->
-    computed: {
-    	matchItems: function() {
-    		return this.items.filter(item => item.key === this.key)
-    	}
-    }
-    ```
-
-    
-
-##### template
-
-```vue
-<template v-if="count % 2 == 0">
-	<span>여러개의 태그를 묶어서 처리해야 할 경우</span>
-	<span>각각의 태그에 v-if를 달 필요가 없다</span>
-</template>
-```
-
-- 여러개의 태그를 묶어서 처리해야 할 경우 사용한다
-
-
-
-##### v-cloak
-
-```vue
-<style>
-    [v-cloak]::before {
-        content: '로딩중,,,',
-    }
-</style>
-<div id="app">
-    <div v-cloak>
-        <h1> {{ msg }} </h1>
-    </div>
-</div>
-```
-
-- Vue instance가 준비될 때 까지 mustache 바인딩을 숨기는데 사용한다
+- 위와 같이 Vue 인스턴스에 이름을 붙이고 `vm.method()` 혹은 `vm.variable`로 내부 변수나 메서드에 접근할 수 있다.
