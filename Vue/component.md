@@ -103,11 +103,22 @@ components: {
 
 ### 상위에서 하위 컴포넌트로 object 전달
 
+```vue
+post: {
+  id: 1,
+  title: 'my first vue page',
+}
+...
+<blog-post v-bind="post"></blog-post>
+```
+
+- `v-bind`만 사용해서 객체의 모든 속성을 prop으로 전달할 수 있다
+
 
 
 ### 사용자 정의 이벤트
 
-```vue
+```
 // 이벤트 발생
 vm.$emit("<eventname>", [...parameter])
 // 이벤트 수신
@@ -120,6 +131,25 @@ vm.$on("<eventname>", callback(){...});
 
 ### 하위에서 상위 컴포넌트로 event 전달
 
+```
+// 이벤트 발생
+this.$emit("<eventname>");
+// 이벤트 수신
+<child v-on:<eventname>="상위 컴포넌트 메소드명"></child>
+```
+
 
 
 ### 비 상하위간 통신 
+
+> 하위 컴포넌트 간 직접적인 통신은 불가능함. 상위 컴포넌트를 매개로 통신하거나, bus를 이용하거나, Vuex 라이브러리를 사용한다.
+
+- 비어있는 Vue 객체 (Bus)를 Event Bus로 사용
+
+  ```
+  var bus = new Vue();
+  bus.$emit('id-selected', 1);
+  bus.$on('id-selected', function(id) {...});
+  ```
+
+- 상태 관리 라이브러리인 Vuex 사용
