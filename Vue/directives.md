@@ -348,28 +348,28 @@ methods: {
 - select-option의 multiple 속성을 통해 다중 선택 가능
 
   ```vue
-<div id="app">
-  <div>
-    <p>수업을 듣고자하는 지역을 선택하시오(다중가능)</p>
-    <select v-model="selectedArea" multiple>
-      <option disabled value="">선택하세요</option>
-      <option value="buk">부울경</option>
-      <option value="gwangju">광주</option>
-      <option value="gumi">구미</option>
-      <option value="daejeon">대전</option>
-      <option value="seoul">서울</option>
-    </select>
+  <div id="app">
+    <div>
+      <p>여행하고 싶은 지역을 선택하세요. (다중선택 가능)</p>
+      <select v-model="selectedArea" multiple>
+        <option disabled value="">선택하세요</option>
+        <option value="seoul">서울</option>
+        <option value="daejeon">대전</option>
+        <option value="daegu">대구</option>
+        <option value="busan">부산</option>
+        <option value="jeju">제주</option>
+      </select>
+    </div>
+    <span>선택한 지역 : {{ selectedArea }}</span>
   </div>
-  <span>선택한 지역 : {{ selectedArea }}</span>
-</div>
-<script>
-  new Vue({
-    el: '#app',
-    data: {
-      selectedArea: [],
-    },
-  });
-</script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        selectedArea: [],
+      },
+    });
+  </script>
   ```
-
+  
   
