@@ -31,6 +31,8 @@
 - [3. Vue의 filter, methods, computed, watch와 차이점](./Vue/filter_methods_computed_watch.md)
 - [4. Vue Component](./Vue/component.md)
 - [5. Vue Module](./Vue/module.md)
+- [6. Vue에서의 Axios](./Vue/axios.md)
+- [7. Vue Router](./Vue/router.md)
 
 
 
