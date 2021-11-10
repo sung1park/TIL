@@ -112,7 +112,7 @@
 - SQL문을 실행할 mapper XML 파일 (guestbook.xml)
 
   ```xml
-  <mapper namespace="com.test.guestbook.model.dao.GuestBookDao">
+  <mapper namespace="com.ssafy.guestbook.model.dao.GuestBookDao">
   
   	<sql id="searchcondition">
   		<if test="word != null and word != ''">
@@ -120,14 +120,14 @@
            		and subject like concat('%', #{word}, '%')
            	</if>
            	<if test="key != 'subject'">
-           		and g.${key} = #{word}
+           		and ${key} = #{word}
            	</if>
            </if>
   	</sql>
   	
   	<select id="listArticle" parameterType="map" resultType="guestbook">
   		 select g.articleno, g.userid, g.subject, g.content, g.regtime, m.username
-           from guestbook g, member m
+           from guestbook g, ssafy_member m
            where g.userid = m.userid
            <include refid="searchcondition"></include>
            order by g.articleno desc
@@ -135,15 +135,18 @@
   	</select>
   	
   	<select id="getTotalCount" parameterType="map" resultType="int">
-  		select count(g.articleno)
-  		from guestbook g
-  		where 1=1
-           <include refid="searchcondition"></include>
+  		select count(articleno)
+  		from guestbook
+  		<where>
+          <include refid="searchcondition"></include>
+  		</where>
   	</select>
   	
   </mapper>
   ```
-
+  
   - `#{<key>}`를 이용해 parameterType으로 들어오는 map 객체의 값을 sql문에 대입한다.
+  - `${}`를 이용해 컬럼을 지정한다.
   - `<include>`를 이용해 반복되는 조건을 불러온다.
+  - `<where>`를 이용하면 조건에 있는 and 앞에 where이 없을 때 자동으로 where로 바꿔준다.
 
