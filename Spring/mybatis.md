@@ -1,8 +1,8 @@
-# 1. MyBatis
+# 9. MyBatis
 
 
 
-### 1-1. MyBatis
+### 9-1. MyBatis
 
 ##### 개요
 
@@ -20,7 +20,7 @@
 
 
 
-### 1-2. MyBatis 설정하기
+### 9-2. MyBatis 설정하기
 
 **Document :** https://mybatis.org/mybatis-3/index.html
 
