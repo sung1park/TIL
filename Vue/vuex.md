@@ -212,7 +212,7 @@ methods: {
 },
 ```
 
-- **동기** method
+- **동기** method, 첫 번째 인자로 'state'를 받음
 - State에 직접 접근할 수 있는 유일한 방법
 - <u>commit</u>으로 접근, 객체를 같이 넘길 수 있음
 - 실무에서는 Actions와 구분하기 위해 이름을 대문자로 쓰는 편
@@ -274,10 +274,22 @@ methods: {
 },
 ```
 
-- **비동기** method
+- **비동기** method, 첫 번째 인자로 'context'를 받음
 - 비동기 작업의 결과를 적용하려고 할 때 사용
 - 비동기 로직이 끝나고 mutations을 동기적으로 처리
 - <u>dispatch</u>로 접근
+
+
+
+```js
+actions: {
+  createTodo({ commit }, todoItem) {
+      commit('CREATE_TODO', todoItem);
+  },
+}
+```
+
+- actions의 메서드의 첫 인자는 'context'이지만, 위처럼 객체 타입으로 'commit'을 직접 받아 사용할 수 있다
 
 
 

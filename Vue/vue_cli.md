@@ -39,8 +39,6 @@ npm install
 
 
 
-
-
 ### 프로젝트 생성
 
 ```bash
