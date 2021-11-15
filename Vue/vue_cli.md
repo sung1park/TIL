@@ -147,5 +147,19 @@ export default axios.create({
 ### 그 외
 
 - `@`는 src 경로를 의미
-- `props`로 Object를 넘겨줄 수는 없음
+
+- `props`로 Object를 바로 pass 할 수 없다
+
+  ```
+  <blog-post v-bind="post"></blog-post>
+  ```
+
+  ```
+  post: {
+    id: 1,
+    title: 'My Journey with Vue'
+  }
+  ```
+
+  위 처럼 `v-bind`를 이용해 모든 property를 pass할 수 있다
 
