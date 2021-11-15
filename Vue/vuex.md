@@ -298,3 +298,6 @@ export default {
 
 
 
+#### 정리
+
+![vuex](img/vuex.png)
