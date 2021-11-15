@@ -33,6 +33,9 @@
 - [5. Vue Module](./Vue/module.md)
 - [6. Vue에서의 Axios](./Vue/axios.md)
 - [7. Vue Router](./Vue/router.md)
+- [8. Vue CLI](./Vue/vue_cli.md)
+- [9. Bootstrap Vue](./Vue/bootstrap_vue.md)
+- [10. Vuex](./Vue/vuex.md)
 
 
 
