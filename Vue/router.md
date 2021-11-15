@@ -210,3 +210,17 @@ $router.push({ path: '/board', query: {pg: 1} })
 - 자바스크립트의 `location.href`에 대응되는 방식
 - 화면 상에서 이벤트와 같은 것들에 사용할 수 있지만, 링크의 경우에는 `<router-link>`를 사용
 - Vue 객체 안의 method 같은 곳에서 주로 이용한다
+
+
+
+### History mode
+
+`vue-router`의 기본 모드는 hash mode이다. URL 해시(#)를 사용해 전체 URL을 시뮬레이트 하여 URL이 변경될 때 페이지가 다시 로드 되지 않는다. 해시를 제거하기 위해 아래와 같이 **history** 모드를 사용할 수 있다.
+
+```vue
+const router = new VueRouter({
+  mode: 'history',
+  routes: [...]
+})
+```
+
