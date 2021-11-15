@@ -78,3 +78,24 @@ axios({
 
 - 옵션 속성에는 url, http 요청 방식, 보내는 데이터 유형 등을 직접 정의하여 보낼 수 있음
 
+
+
+### async, await
+
+```js
+const todosURL = 'https://jsonplaceholder.typicode.com/todos';
+
+async function getTodo(todosURL) {
+  const response = await axios.get(todosURL);
+  const id = response.data[0].id;
+  const todo = await axios.get(`${todosURL}/${id}`);
+  console.log(todo.data);
+}
+
+getTodo(todosURL).catch((error) => {
+  console.log('error : ' + error);
+})
+```
+
+- 처리하는 함수 앞에 `async`를 붙여 비동기적으로 처리함을 표시한다
+- axios 구문 앞에 `await`을 붙여 데이터를 다 처리할때까지 기다린다
