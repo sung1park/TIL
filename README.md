@@ -1,57 +1,62 @@
-# Today I Learned
+# Today I Learned✔
+
+> 매일 공부한 것을 기록하는 레퍼지토리입니다.
 
 
 
-## 서론
+## Commit Rule
 
-2021년 7월 SSAFY에 입과하고 처음 깃허브를 사용하면서 TIL 레퍼시토리를 만들었다. 공부한 것을 기록하고 다시 들여다보는게 중요함을 알기에 매일 배운 것들을 하나씩 올려보자는 마음으로 시작했는데, 디지털 문서로 정리하는 것이 익숙치 않고 제대로된 규칙을 정해놓지 않아 그 동안의 기록을 제대로 남기지 못했다.
-
-프로그래밍 공부를 시작하고 3개월간 python, java, html, css, js, servlet, jsp, spring 그리고 알고리즘까지 정말 방대한 양의 내용을 배웠는데, 내 머릿속에 온전히 남아 있을거라곤 생각하지 않는다. [학습에 실패한 이야기 (우아한형제들 기술 블로그)](https://techblog.woowahan.com/2555/)를 읽으며 공부하는 방법을 조금 정비하고 가야겠다고 생각했고, 그 시작으로 TIL의 목표와 규칙을 정해 다시 써보려고 한다. 
+▶ [커밋 메시지 작성 규칙](./Git/commit_messages.md)
 
 
 
-## 목표
+## Posts
 
-- 백과사전 같은 글은 아니더라도, 읽었을 때 내가 공부한 것을 다시금 떠올릴 수 있도록 글을 작성하기
+#### Vue.js
 
-
-
-## 규칙
-
-
-
-
-
-## 분류
-
-#### Vue
-
-- [1. Vue 기본](./Vue/basic.md)
-- [2. Vue Directives](./Vue/directives.md)
-- [3. Vue의 filter, methods, computed, watch와 차이점](./Vue/filter_methods_computed_watch.md)
-- [4. Vue Component](./Vue/component.md)
-- [5. Vue Module](./Vue/module.md)
-- [6. Vue에서의 Axios](./Vue/axios.md)
-- [7. Vue Router](./Vue/router.md)
-- [8. Vue CLI](./Vue/vue_cli.md)
-- [9. Bootstrap Vue](./Vue/bootstrap_vue.md)
-- [10. Vuex](./Vue/vuex.md)
+- [Vue.js 기본, 특징](./Vue/basic.md)
+- [Vue Directives](./Vue/directives.md)
+- [Vue의 filter, methods, computed, watch와 차이점](./Vue/filter_methods_computed_watch.md)
+- [Vue Component](./Vue/component.md)
+- [Vue Module](./Vue/module.md)
+- [Vue에서의 Axios](./Vue/axios.md)
+- [Vue Router](./Vue/router.md)
+- [Vue CLI](./Vue/vue_cli.md)
+- [Bootstrap Vue](./Vue/bootstrap_vue.md)
+- [Vuex](./Vue/vuex.md)
 
 
 
 #### Spring
 
-- [1. Spring Framework](./Spring/spring_framework.md)
-- [2. Inversion of Control](./Spring/inversion_of_control.md)
-- [3. Dependency Injection](./Spring/dependency_injection.md)
-- [4. AOP](./Spring/aop.md)
-- [5. Spring Web MVC](./Spring/spring_mvc.md)
-- [6. Spring Web MVC 정리](./Spring/spring_mvc_summary.md)
-- [7. Interceptor](./Spring/interceptor.md)
-- [8. File Upload/Download](./Spring/file_upload_download.md)
-- [9. MyBatis](./Spring/mybatis.md)
+- [Spring Framework](./Spring/spring_framework.md)
+- [Inversion of Control](./Spring/inversion_of_control.md)
+- [Dependency Injection](./Spring/dependency_injection.md)
+- [AOP](./Spring/aop.md)
+- [Spring Web MVC](./Spring/spring_mvc.md)
+- [Spring Web MVC 정리](./Spring/spring_mvc_summary.md)
+- [Interceptor](./Spring/interceptor.md)
+- [File Upload/Download](./Spring/file_upload_download.md)
+- [MyBatis](./Spring/mybatis.md)
 
 
 
-## 참고
+#### Algorithm
 
+- [스택 / 큐](./Algorithm/Stack_Queue.md)
+- [리스트](./Algorithm/List.md)
+- [트리](./Algorithm/Tree.md)
+- [완전 탐색](./Algorithm/Exhaustive_Search.md)
+- [백트래킹](./Algorithm/Backtracking.md)
+- [이진 탐색](./Algorithm/Binary_Search.md)
+- [분할 정복](./Algorithm/Divide_and_Conquer.md)
+- [DFS / BFS](./Algorithm/BFS_DFS.md)
+- [그리디](./Algorithm/Greedy.md)
+- [그래프](./Algorithm/Graph.md)
+- [힙 / 우선순위 큐](./Algorithm/Heap&Priority_Queue.md)
+- [서로소 집합](./Algorithm/Disjoint_Set.md)
+- [최소 스패닝 트리](./Algorithm/Minimum_Spanning_Tree.md)
+- [최단 경로](./Algorithm/Shortest_Path.md)
+- [다이나믹 프로그래밍1](./Algorithm/Dynamic_Programming_1.md)
+- [다이나믹 프로그래밍2](./Algorithm/Dynamic_Programming_2.md)
+- [문자열](./Algorithm/String.md)
