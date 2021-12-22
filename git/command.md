@@ -4,7 +4,7 @@
 
 
 
-![image-20210715175452710](command.assets/image-20210715175452710.png)
+![image-20210715175452710](https://user-images.githubusercontent.com/82884242/147121087-73f680c4-7909-4293-a118-fc73d40e71a0.png)
 
 > 로컬(Local)에 있는 파일들을 add, commit, push를 통해 원격 저장소(remote)에 업로드한다.
 
