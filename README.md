@@ -60,3 +60,12 @@
 - [다이나믹 프로그래밍1](./Algorithm/Dynamic_Programming_1.md)
 - [다이나믹 프로그래밍2](./Algorithm/Dynamic_Programming_2.md)
 - [문자열](./Algorithm/String.md)
+
+
+
+#### Python Data Analysis
+
+- [Numpy 알아보기](./Python_DataAnalysis/NumPy.md)
+- [Pandas 기초](./Python_DataAnalysis/Pandas.md)
+- [Pandas 심화](./Python_DataAnalysis/Pandas_advanced.md)
+- [Matplotlib](./Python_DataAnalysis/Matplotlib.md)
