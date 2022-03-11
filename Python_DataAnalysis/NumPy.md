@@ -180,6 +180,8 @@ np.array([1, 2, 3, 4], dtype='float')
 
 ##### mean
 
+##### std
+
 
 
 ### 마스킹 연산
