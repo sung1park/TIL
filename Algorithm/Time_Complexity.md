@@ -18,7 +18,7 @@
 
 ### Seven Important Functions
 
-![image-20220311154005789](C:\Users\sungi\TIL\Algorithm\assets\image-20220311154005789.png)
+![image-20220311154341570](assets/image-20220311154341570.png)
 
 - 아래로 내려올 수록 n값의 증가에 따라 함수값이 더 빠르게 증가한다
 
