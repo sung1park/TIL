@@ -46,6 +46,7 @@
 - [스택 / 큐](./Algorithm/Stack_Queue.md)
 - [리스트](./Algorithm/List.md)
 - [트리](./Algorithm/Tree.md)
+- [시간 복잡도](./Algorithm/Time_Complexity.md)
 - [완전 탐색](./Algorithm/Exhaustive_Search.md)
 - [백트래킹](./Algorithm/Backtracking.md)
 - [이진 탐색](./Algorithm/Binary_Search.md)
