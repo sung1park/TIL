@@ -152,6 +152,8 @@ ax.legend(
 
 ![image-20220304132556909](C:\Users\sungi\TIL\Python_DataAnalysis\assets\image-20220304132556909.png)
 
+#### 방법 1
+
 ```python
 ax.plot(
 	x, x**2, 'o',
@@ -160,6 +162,8 @@ ax.plot(
     markeredgecolor='blue'
 )
 ```
+
+#### 방법 2
 
 ```python
 x = np.random.randn(50)
@@ -207,3 +211,38 @@ ax.set_xlabel('order')
 ax.set_ylabel('height(cm)')
 ```
 
+
+
+#### 토끼와 거북이 경주 결과
+
+```python
+from matplotlib import pyplot as plt
+import pandas as pd
+
+df = pd.read_csv('./data/the_hare_and_the_tortoise.csv')
+df = df.set_index('시간')
+
+fig, ax = plt.subplots()
+
+# 시간을 index로 설정하지 않은 경우
+# ax.plot(df['시간'], df['토끼'], label='토끼')
+# ax.plot(df['시간'], df['거북이'], label='거북이')
+
+# 시간을 index로 설정한 경우
+# df['토끼'].plot()
+# df['거북이'].plot()
+df.plot(ax=ax)
+
+ax.set_xlabel('시간')
+ax.set_ylabel('위치')
+ax.legend(
+    loc='upper left',
+    shadow=True,
+    fancybox=True,
+    borderpad=2
+)
+
+fig.savefig("plot.png")
+```
+
+- 위 경우 시간을 index로 설정하면 `df.plot(ax=ax)` 처럼 그래프를 만들 수 있음
