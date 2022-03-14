@@ -70,3 +70,4 @@
 - [Pandas 기초](./Python_DataAnalysis/Pandas.md)
 - [Pandas 심화](./Python_DataAnalysis/Pandas_advanced.md)
 - [Matplotlib](./Python_DataAnalysis/Matplotlib.md)
+- [Seaborn](./Python_DataAnalysis/Seaborn.md)
