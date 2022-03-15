@@ -64,6 +64,24 @@
 
 
 
+#### Python
+
+- [기초](./Python/basics.md)
+- [자료형](./Python/data_type.md)
+- [함수](./Python/function.md)
+- [모듈](./Python/module.md)
+- [에러 및 예외](./Python/error_exception.md)
+- [객체 지향 프로그래밍](./Python/object_oriented_programming.md)
+- [재귀 함수](./Python/recursive_function.md)
+- [API 활용](./Python/api.md)
+- [크롤링](./Python/crawling.md)
+- [Tuple로 구성된 리스트 정렬하기](./Python/sorting_tuple.md)
+- [객체가 가진 메서드 찾기](./Python/to_find_methods_for_objects.md)
+- [가상환경](./Python/virtual_environment.md)
+- [파이썬 알고리즘 팁](./Python/algorithm_tips.md)
+
+
+
 #### Python Data Analysis
 
 - [Numpy 알아보기](./Python_DataAnalysis/NumPy.md)
