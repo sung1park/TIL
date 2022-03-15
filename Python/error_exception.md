@@ -1,4 +1,4 @@
-# Exception
+# Error & Exception
 
 > Python의 Error, Exception
 
