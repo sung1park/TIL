@@ -1,12 +1,12 @@
 # Data Type
 
->Python의 자료형
+>Python의 자료형과 사용법
 >
->숫자형, 문자열, 리스트, 튜플, 딕셔너리, 집합, 불리언
+>Numbers, String, Tuple, Boolean, List, Set, Dictionary
 
 
 
-## 숫자형
+## Numbers
 
 > int, float, complex
 
@@ -26,11 +26,11 @@
 
 `complex`
 
-- 실수부와 허수부로 구성된 복소수는 `complex`
+- 실수부와 허수부로 구성된 복소수
 
 
 
-## 문자열
+## String
 
 - `'` 혹은 `"` 를 이용해 표기
 - 소스코드 내에서는 둘 중 하나만 선택하여 이용하기 (style guide)
@@ -47,35 +47,25 @@
 
 #### 문자열 조회/탐색
 
-`.find(x)`
+`s.find(x)`: `x`의 첫 번째 위치를 반환. 없으면 -1을 반환
 
-- `x`의 첫 번째 위치를 반환. 없으면 -1을 반환
-
-
-
-`.index(x)`
-
-- `x`의 첫 번째 위치를 반환. 없으면 오류 발생
+`s.index(x)`: `x`의 첫 번째 위치를 반환. 없으면 오류 발생
 
 
 
 #### 문자열 변경
 
-`.replace(old, new[,count])`
+`s.replace(old, new[,count])`
 
 - 바꿀 대상 글자를 새로운 글자로 바꿔서 변환 (복사본 반환)
 - count를 지정하면, 해당 개수만큼만 시행
 
-
-
-`.strip([chars])`
+`s.strip([chars])`
 
 - 특정한 문자들을 지정하면 양쪽을 제거하거나(strip), 왼쪽을 제거하거나 (lstrip), 오른쪽을 제거(rstrip)
 - 문자열을 지정하지 않으면 공백을 제거함
 
-
-
-`.split(sep=None)`
+`s.split(sep=None)`
 
 - 문자열을 특정한 단위로 나눠 리스트로 반환
 
@@ -84,9 +74,8 @@
   'a b c'.split()    #['a', 'b', 'c']
   ```
 
-  
 
-`'separator'.join(iterable)`
+`'<separator>'.join(iterable)`
 
 - 반복 가능한 컨테이너 요소들을 separator(구분자)로 합쳐 문자열 반환
 
@@ -95,61 +84,60 @@
   ' '.join(['3', '5']) #'3 5'
   ```
 
-  
 
-`.capitalize()` : 앞글자를 대문자로
+`s.capitalize()` : 앞글자를 대문자로
 
-`.title()` : `'`나 공백 이후를 대문자로
+`s.title()` : `'`나 공백 이후를 대문자로
 
-`.upper()` : 모두 대문자로
+`s.upper()` : 모두 대문자로
 
-`.lower()` : 모두 소문자로
+`s.lower()` : 모두 소문자로
 
-`.swapcase()` : 대소문자 변경하여
+`s.swapcase()` : 대소문자 변경하여
 
 
 
 #### 문자열 관련 검증 메서드
 
-`.isalpha()` : 알파벳 문자여부 (한국어도 포함)
+`s.isalpha()` : 알파벳 문자여부 (한국어도 포함)
 
-`.isupper()` : 대문자 여부
+`s.isupper()` : 대문자 여부
 
-`.islower()` : 소문자 여부
+`s.islower()` : 소문자 여부
 
-`.istitle()` : 타이틀 형식 여부. 단어가 대문자로 시작하고 나머지 문자는 소문자.
+`s.istitle()` : 타이틀 형식 여부. 단어가 대문자로 시작하고 나머지 문자는 소문자.
 
 
 
-## 리스트
+## List
 
-#### 값 추가 및 삭제
+#### 추가 및 삭제
 
-`.append(x)` : 값 추가
+`l.append(x)` : 값 추가
 
-`.extend(iterable)` : 리스트에 iterable의 항목을 추가함. 문자열을 넣으면 문자 하나하나 추가됨
+`l.extend(iterable)` : 리스트에 iterable의 항목을 추가함. 문자열을 넣으면 문자 하나하나 추가됨
 
-`.insert(i, x)` : 정해진 위치`i`에 값을 추가. 리스트 길이보다 큰 경우 맨 뒤에 추가
+`l.insert(i, x)` : 정해진 위치`i`에 값을 추가. 리스트 길이보다 큰 경우 맨 뒤에 추가
 
-`.remove(x)` : 리스트에서 값이 `x`인 첫번째 항목 삭제
+`l.remove(x)` : 리스트에서 값이 `x`인 첫번째 항목 삭제
 
-`.pop(i)` : 정해진 위치 `i`에 있는 값을 삭제하고, 그 항목을 반환함.
+`l.pop(i)` : 정해진 위치 `i`에 있는 값을 삭제하고, 그 항목을 반환함.
 
 ​                   `i`가 지정되지 않으면, 마지막 항목을 삭제하고 반환함
 
-`.clear()` : 모든 항목을 삭제함
+`l.clear()` : 모든 항목을 삭제함
 
 
 
 #### 탐색 및 정렬
 
-`.index(x)` : 첫번째 `x`값을 찾아 해당 index값을 반환. 없는 경우 ValueError
+`l.index(x)` : 첫번째 `x`값을 찾아 해당 index값을 반환. 없는 경우 ValueError
 
-`.count(x)` : 원하는 값 `x`의 개수를 반환함
+`l.count(x)` : 원하는 값 `x`의 개수를 반환함
 
-`.sort()` : 원본 리스트를 정렬함. None 반환
+`l.sort()` : 원본 리스트를 정렬함. None 반환
 
-`.reverse()` : 순서를 반대로 뒤집음 (정렬하는 것이 아님)
+`l.reverse()` : 순서를 반대로 뒤집음 (정렬하는 것이 아님)
 
 
 
@@ -207,8 +195,6 @@ b = copy.deepcopy(a)
 
 
 
-
-
 #### Built-in Function - map
 
 ```
@@ -252,66 +238,91 @@ pair = zip(girls, boys)
 
 
 
-## 세트
+## Set
 
-`.add(elem)`
+> 중복과 순서가 없는 자료형
 
-- 세트에 값을 추가
+#### 선언
 
-`.update(*others)`
+딕셔너리와 같이 `{}`로 선언하며, 원소들에 `:`가 있는지 여부로 딕셔너리와 구분된다. `set()`을 사용해 선언할 수도 있다.
 
-- 여러 값을 추가
-
-`.remove(elem)`
-
-- 세트에서 삭제하고, 없으면 KeyError
-
-`.discard(elem)`
-
-- 세트에서 삭제하고, 없어도 에러가 발생하지 않음
-
-`.pop()`
-
-- 임의의 원소를 제거해 반환
+```python
+set1 = {1, 2, 3}
+set2 = set([1, 2, 3]) # 리스트를 집합으로
+```
 
 
-
-## 딕셔너리
 
 #### 추가 및 삭제
 
-`.get(key[, default])`
+`.add(elem)`: 세트에 값을 추가
 
-- key를 통해 value를 가져옴
+`.update(*others)`: 여러 값을 추가
+
+`.remove(elem)`: 세트에서 삭제하고, <u>없으면 KeyError</u>
+
+`.discard(elem)`: 세트에서 삭제하고, 없어도 에러가 발생하지 않음
+
+`.pop()`: 임의의 원소를 제거해 반환
+
+
+
+#### 값 확인
+
+`<el> in <set>`: 세트에 원소가 있는지 확인
+
+`len(<set>)`: 세트의 크기 확인 
+
+
+
+#### 연산
+
+```python
+union = set1 | set2          # 합집합
+intersection = set1 & set2   # 교집합
+diff = set1 - set2           # 차집합 
+xor = set1 ^ set2            # XOR
+```
+
+
+
+## Dictionary
+
+#### 딕셔너리 키
+
+- 딕셔너리의 키는 <u>변하지 않는(immutable)</u> 값이어야 함
+- `<key> in <dictionary>` 형식으로 키를 확인할 수 있음
+
+
+
+#### 추가 및 삭제
+
+`d.get(key[, default])`: key를 통해 value를 가져옴
+
 - KeyError가 발생하지 않으며, default 값을 설정할 수 있음 (기본: None)
 
-`.pop(key[, default])`
+`d.pop(key[, default])`: key가 딕셔너리에 있으면 제거하고 해당 값을 반환
 
-- key가 딕셔너리에 있으면 제거하고 해당 값을 반환
-- 그렇지 않으면 default를 반환
-- default  값이 없으면 KeyError
+- 그렇지 않으면 default를 반환하고, default 값이 없으면 KeyError
 
-`.update()`
+`d.update(key=Value)`: 값을 제공하는 key, value로 덮어씀
 
-- 값을 제공하는 key, value로 덮어씀
-
-  ```python
-  my_dict.update(apple = '사과')
+- ```python
+  my_dict.update(apple='사과')
   ```
+
+`del d[key]`: key에 해당하는 항목을 삭제
 
 
 
 #### 딕셔너리 순회
 
-- 딕셔너리는 기본적으로 key를 순회하며, key를 통해 값을 활용
+```python
+for index, value in my_dict.items():
+```
 
-- 추가 메서드를 활용하여 순회할 수 있음
-
-  - keys(), values(), items()
-
-    ```python
-    for index, value in my_dict.items():
-    ```
+- 기본적으로 key를 순회하며, key를 통해 값을 활용
+- `keys()`, `values()`, `items()`
 
 
 
@@ -321,8 +332,6 @@ pair = zip(girls, boys)
 {key: value for <변수> in <iterable>}
 {key: value for <변수> in <iterable> if <조건식>}
 ```
-
-
 
 ```python
 dusts = {
@@ -336,3 +345,12 @@ result = {key: value for key, value in dusts.items() if value > 70}
 
 
 
+#### JSON과 딕셔너리 변환
+
+```python
+import json
+```
+
+`json.loads()`: JSON에서 딕셔너리로 (load string)
+
+`json.dumps()`: 딕셔너리를 JSON으로 (dump string)
