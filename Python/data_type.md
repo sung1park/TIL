@@ -255,15 +255,15 @@ set2 = set([1, 2, 3]) # 리스트를 집합으로
 
 #### 추가 및 삭제
 
-`.add(elem)`: 세트에 값을 추가
+`s.add(elem)`: 세트에 값을 추가
 
-`.update(*others)`: 여러 값을 추가
+`s.update(*others)`: 여러 값을 추가
 
-`.remove(elem)`: 세트에서 삭제하고, <u>없으면 KeyError</u>
+`s.remove(elem)`: 세트에서 삭제하고, <u>없으면 KeyError</u>
 
-`.discard(elem)`: 세트에서 삭제하고, 없어도 에러가 발생하지 않음
+`s.discard(elem)`: 세트에서 삭제하고, 없어도 에러가 발생하지 않음
 
-`.pop()`: 임의의 원소를 제거해 반환
+`s.pop()`: 임의의 원소를 제거해 반환
 
 
 
