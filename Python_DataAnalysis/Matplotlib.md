@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 ### Matplotlib 구조
 
-![image-20220304114458549](C:\Users\sungi\TIL\Python_DataAnalysis\assets\image-20220304114458549.png)
+![image-20220304114458549](assets\image-20220304114458549.png)
 
 
 
@@ -100,7 +100,7 @@ ax.plot(
 ax.plot(x, x**2, linestyle="-")
 ```
 
-![image-20220304130450938](C:\Users\sungi\TIL\Python_DataAnalysis\assets\image-20220304130450938.png)
+![image-20220304130450938](assets\image-20220304130450938.png)
 
 - `-`, `--`, `-.`, `:`
 
@@ -150,7 +150,7 @@ ax.legend(
 
 ## Scatter
 
-![image-20220304132556909](C:\Users\sungi\TIL\Python_DataAnalysis\assets\image-20220304132556909.png)
+![image-20220304132556909](assets\image-20220304132556909.png)
 
 #### 방법 1
 
@@ -181,7 +181,7 @@ ax.scatter(
 
 ### Bar plot
 
-![image-20220304132608833](C:\Users\sungi\TIL\Python_DataAnalysis\assets\image-20220304132608833.png)
+![image-20220304132608833](assets\image-20220304132608833.png)
 
 ```python
 ax.bar(x, x*2)
@@ -191,7 +191,7 @@ ax.bar(x, x*2)
 
 ### Histogram
 
-![image-20220304132750273](C:\Users\sungi\TIL\Python_DataAnalysis\assets\image-20220304132750273.png)
+![image-20220304132750273](assets\image-20220304132750273.png)
 
 ```python
 ax.hist(data, bins=50)
@@ -201,7 +201,7 @@ ax.hist(data, bins=50)
 
 ## Matplotlib with Pandas
 
-![image-20220304133056993](C:\Users\sungi\TIL\Python_DataAnalysis\assets\image-20220304133056993.png)
+![image-20220304133056993](assets\image-20220304133056993.png)
 
 ```python
 df = pd.read_csv('./president_heights.csv')

@@ -14,7 +14,7 @@
 
 ### 생성
 
-![image-20220303154720686](C:\Users\sungi\TIL\Python_DataAnalysis\assets\image-20220303154720686.png)
+![image-20220303154720686](assets\image-20220303154720686.png)
 
 ```python
 import pandas as pd
@@ -46,7 +46,7 @@ population_dict = dict(population)
 
 ### 생성
 
-![image-20220303160549398](C:\Users\sungi\TIL\Python_DataAnalysis\assets\image-20220303160549398.png)
+![image-20220303160549398](assets\image-20220303160549398.png)
 
 ```python
 country = pd.DataFrame({
@@ -183,7 +183,7 @@ A + B
 A.add(B, fill_value=0)
 ```
 
-![image-20220303170410637](C:\Users\sungi\TIL\Python_DataAnalysis\assets\image-20220303170410637.png)
+![image-20220303170410637](assets\image-20220303170410637.png)
 
 - 결측치를 더하면 NaN값을 출력
 - add 메서드의 fill_value를 이용하면 결측치를 대치해서 계산할 수 있음
@@ -201,7 +201,7 @@ A + B
 A.add(B, fill_value=0)
 ```
 
-![image-20220303170946274](C:\Users\sungi\TIL\Python_DataAnalysis\assets\image-20220303170946274.png)
+![image-20220303170946274](assets\image-20220303170946274.png)
 
 - NaN 계산은 Series 연산과 같음
 

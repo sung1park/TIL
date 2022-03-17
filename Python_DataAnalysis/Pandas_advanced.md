@@ -69,7 +69,7 @@ df.groupby('key').sum()
 df.groupby(['key', 'data1']).sum()
 ```
 
-![image-20220304101239428](C:\Users\sungi\TIL\Python_DataAnalysis\assets\image-20220304101239428.png)
+![image-20220304101239428](assets\image-20220304101239428.png)
 
 ##### aggregate
 
@@ -80,7 +80,7 @@ df.groupby('key').aggregate(['min', np.median, max])
 df.groupby('key').aggregate({'data1': 'min', 'data2': np.sum})
 ```
 
-![image-20220304101444044](C:\Users\sungi\TIL\Python_DataAnalysis\assets\image-20220304101444044.png)
+![image-20220304101444044](assets\image-20220304101444044.png)
 
 ##### filter
 
@@ -93,7 +93,7 @@ df.groupby('key').mean()
 df.groupby('key').filter(filter_by_mean)
 ```
 
-![image-20220304101804857](C:\Users\sungi\TIL\Python_DataAnalysis\assets\image-20220304101804857.png)
+![image-20220304101804857](assets\image-20220304101804857.png)
 
 ##### apply
 
@@ -103,7 +103,7 @@ df.groupby('key').filter(filter_by_mean)
 df.groupby('key').apply(lambda x: x.max() - x.min())
 ```
 
-![image-20220304101851213](C:\Users\sungi\TIL\Python_DataAnalysis\assets\image-20220304101851213.png)
+![image-20220304101851213](assets\image-20220304101851213.png)
 
 ##### get_group
 
@@ -115,7 +115,7 @@ df.head()
 df.groupby('시도').get_group('충남')
 ```
 
-![image-20220304102042844](C:\Users\sungi\TIL\Python_DataAnalysis\assets\image-20220304102042844.png)
+![image-20220304102042844](assets\image-20220304102042844.png)
 
 
 
@@ -131,7 +131,7 @@ df = pd.DataFrame(
 )
 ```
 
-![image-20220304105946755](C:\Users\sungi\TIL\Python_DataAnalysis\assets\image-20220304105946755.png)
+![image-20220304105946755](assets\image-20220304105946755.png)
 
 - 열 인덱스도 계층적으로 만들 수 있다
 
@@ -142,7 +142,7 @@ df = pd.DataFrame(
 )
 ```
 
-![image-20220304110002320](C:\Users\sungi\TIL\Python_DataAnalysis\assets\image-20220304110002320.png)
+![image-20220304110002320](assets\image-20220304110002320.png)
 
 - 다중 인덱스 컬럼의 경우 인덱싱은 계층적으로 한다.
 - 인덱스 탐색의 경우`loc`, `iloc` 사용 가능
@@ -170,4 +170,4 @@ df.pivot_table(
 )
 ```
 
-![image-20220304110549108](C:\Users\sungi\TIL\Python_DataAnalysis\assets\image-20220304110549108.png)
+![image-20220304110549108](assets\image-20220304110549108.png)
