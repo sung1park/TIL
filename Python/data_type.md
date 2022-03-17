@@ -195,49 +195,6 @@ b = copy.deepcopy(a)
 
 
 
-#### Built-in Function - map
-
-```
-map(function, iterable)
-```
-
-- 순회 가능한 데이터구조(iterable)의 모든 요소에 함수(function)를 적용하고, 그 결과를 map object로 반환 
-- 리스트로 형변환하여 확인 가능
-
-```python
-n, m = map(int, input().split())
-```
-
-
-
-#### Built-in Function - filter
-
-```
-filter(function, iterable)
-```
-
-- 순회 가능한 데이터구조(iterable)의 모든 요소에 함수(function)를 적용하고, 그 결과가 True인 것들을 filter object로 반환
-- 리스트로 형변환하여 확인 가능
-
-
-
-#### Built-in Function - zip
-
-```
-zip(*iterables)
-```
-
-- 복수의 iterable을 모아 튜플을 원소로 하는 zip object를 반환
-
-```python
-girls = ['jane', 'ashley']
-boys = ['justin', 'eric']
-pair = zip(girls, boys)
-[('jane', 'justin'), ('ashley', 'eric')]
-```
-
-
-
 ## Set
 
 > 중복과 순서가 없는 자료형
