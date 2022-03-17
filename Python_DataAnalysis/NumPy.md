@@ -169,18 +169,10 @@ np.array([1, 2, 3, 4], dtype='float')
 
 ### 집계함수
 
+`sum`, `min`, `max`, `mean`, `std`
+
 - `np.sum(array, axis=0)` 처럼 축을 지정할 수 있음
 - `matrix.sum(axis=0)` 처럼 python 자체의 메서드를 사용할 수 있음
-
-##### sum
-
-##### min
-
-##### max
-
-##### mean
-
-##### std
 
 
 
