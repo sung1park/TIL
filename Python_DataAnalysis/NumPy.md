@@ -14,6 +14,8 @@
 
 C++ 기반으로 만들어진 라이브러리. 연산이 빠르다.
 
+머신러닝에서 대부분의 데이터는 행렬로 표현된다.
+
 
 
 ## NumPy 배열
@@ -167,15 +169,6 @@ np.array([1, 2, 3, 4], dtype='float')
 
 
 
-### 집계함수
-
-`sum`, `min`, `max`, `mean`, `std`
-
-- `np.sum(array, axis=0)` 처럼 축을 지정할 수 있음
-- `matrix.sum(axis=0)` 처럼 python 자체의 메서드를 사용할 수 있음
-
-
-
 ### 마스킹 연산
 
 Boolean(True, False) array를 통해서 특정 값들을 뽑아내는 방법
@@ -191,3 +184,101 @@ x[x < 3]
 # array([0, 1, 2])
 ```
 
+
+
+### 집계함수, Reductions
+
+- `np.sum(array, axis=0)` 처럼 축을 지정할 수 있음
+- `matrix.sum(axis=0)` 처럼 python 자체의 메서드를 사용할 수 있음
+
+
+
+**Reductions** `sum`, `min`, `max`, `argmin`, `argmax`
+
+- `argmin/max`: 최소/최대값의 인덱스를 반환
+
+**Logical Reductions** `all`, `any`
+
+- `all`: Array 내의 모든 값이 True인지
+- `any`: Array 내의 값이 하나라도 True인지
+
+**Statistical Reductions** `mean`,  `median`, `std`, `var`
+
+- 평균값, 중간값, 표준 편차값, 분산값
+
+
+
+### 산술 연산
+
+`+`, `-`, `*`, `/`
+
+- <u>행렬 내 원소</u>에 대한 산술 연산
+
+
+
+`np.dot()`
+
+- 두 행렬의 곱셈 혹은 두 벡터의 내적(dot product)을 구할 때 사용
+- 두 행렬의 크기 또는 shape이 맞지 않으면 오류가 발생
+
+- `x * y`와 다름
+
+```python
+C = np.dot(A, B)
+```
+
+
+
+`np.linalg.norm()`
+
+- 벡터의 norm(원점에서의 거리)을 구할 때 사용
+
+
+
+### 비교 연산
+
+```python
+a = np.array([1, 2, 3, 4])
+b = np.array([4, 2, 2, 4])
+
+print(a == b) # [False, True, False, True]
+print(a > b) # [False, False, True, False]
+```
+
+
+
+### 논리 연산
+
+`np.logical_and()`, `np.logical_or()`
+
+- 각각의 원소에 대한 논리 연산 수행 
+
+```python
+a = np.array([1, 1, 0, 0], dtype=bool)
+b = np.array([1, 0, 1, 0], dtype=bool)
+
+np.logical_or(a, b) # [True, True, True, False]
+np.logical_and(a, b) # [True, False, False, False]
+```
+
+
+
+`np.transpose()`
+
+- `transpose()` 또는 `T`를 이용하여 전치행렬을 구함
+
+```python
+print(A.T)
+B = np.transpose(A)
+```
+
+
+
+`np.linalg.inv()`
+
+- `inv()`는 행렬의 역행렬을 구할 때 사용
+- NumPy의 선형대수학 관련 세부 패키지인 `linalg`를 사용
+
+```python
+print(np.linalg.inv(A))
+```
