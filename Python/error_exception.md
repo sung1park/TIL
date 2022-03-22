@@ -67,9 +67,9 @@
 
 
 
-### 예외 처리 
+## 예외 처리 
 
-##### EAFP (Easier to Ask for Forgiveness than Permission)
+#### EAFP (Easier to Ask for Forgiveness than Permission)
 
 - 허락보다 용서를 구하는 것이 쉽다.
 - 예외 처리를 활용하여 검사를 수행하지 않고, 일단 실행하고 예외 처리를 진행하는 스타일
@@ -95,6 +95,8 @@ else:
 
 
 
+#### try ~ except ~ else ~ finally
+
 - `try ` : 코드를 실행함
 
 - `except` : try문에서 예외가 발생 시 실행함
@@ -103,44 +105,44 @@ else:
 
 - `finally` : 예외 발생 여부와 관계없이 항상 실행함
 
-    ```python
-    try:
-        f = open('nooofile.txt')
-    except FileNotFoundError:
-        print('해당 파일이 없습니다.')
-    else:
-        print('파일을 읽기 시작합니다.')
-        print(f.read())
-        print('파일을 모두 읽었습니다.')
-        f.close()
-    finally:
-        print('파일 읽기를 종료합니다.')
-    ```
+```python
+try:
+    f = open('nooofile.txt')
+except FileNotFoundError:
+    print('해당 파일이 없습니다.')
+else:
+    print('파일을 읽기 시작합니다.')
+    print(f.read())
+    print('파일을 모두 읽었습니다.')
+    f.close()
+finally:
+    print('파일 읽기를 종료합니다.')
+```
 
 - 에러 메시지 처리 : `as`를 활용해 원본 에러 메시지를 사용할 수 있음
 
-    ```python
-    try:
-        empty_list = []
-        print(empty_list[-1])
-    except IndexError as err:
-        print(f'{err}, 오류가 발생했습니다.')
-    ```
+```python
+try:
+    empty_list = []
+    print(empty_list[-1])
+except IndexError as err:
+    print(f'{err}, 오류가 발생했습니다.')
+```
 
   
 
-### 예외 발생 시키기
+## 예외 발생 시키기
 
-##### raise
+#### raise
 
 - `raise`를 통해 예외를 강제로 발생
 
-  ```
-  raise <표현식>(메시지)
-  raise ValuError('값 에러 발생')
-  ```
+```python
+raise <표현식>(메시지)
+raise ValuError('값 에러 발생')
+```
 
-##### assert
+#### assert
 
 - `assert`를 통해 예외를 강제로 발생
 
