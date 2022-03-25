@@ -171,3 +171,24 @@ df.pivot_table(
 ```
 
 ![image-20220304110549108](assets/image-20220304110549108.png)
+
+
+
+### Crosstab
+
+- 빈도표 만들기
+- Confusion matrix 만들 때도 사용할 수 있음
+
+```python
+y_true = pd.Series(
+    ["not mafia", "not mafia", "mafia", "not mafia", "mafia", "not mafia", "not mafia",
+     "mafia", "not mafia", "not mafia"]
+    )
+y_pred = pd.Series(
+    ["mafia", "mafia", "not mafia", "not mafia", "mafia", "not mafia", "not mafia",
+    "mafia", "not mafia", "not mafia"]
+    )
+    
+pd.crosstab(y_true, y_pred, rownames=['실제'], colnames=['예측'], margins=True)
+```
+
