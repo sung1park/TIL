@@ -436,6 +436,20 @@ L2 정규화(Ridge)
 
 
 
+#### 정규화 (Normalization)
+
+각각의 데이터가 가진 스케일의 차이를 정규화를 통해 없앤다.
+
+```python
+def normalize(X):
+    # 각각의 데이터에 해당하는 feature의 값이 최소 0, 최대 1이 되도록 선형적으로 데이터를 이동
+    X -= np.min(X)
+    X /= np.max(X) - np.min(X)
+    return X
+```
+
+- `sklearn.preprocessing.MinMaxScaler().fit_transform()`으로 정규화 할 수 있음
+
 
 
 ## 5. 정규화를 적용한 회귀
