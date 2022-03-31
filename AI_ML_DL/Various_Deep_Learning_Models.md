@@ -14,13 +14,13 @@
 
 ### CNN의 구조
 
-<img src="C:\Users\sungi\AppData\Roaming\Typora\typora-user-images\image-20220331102039258.png" alt="image-20220331102039258" style="zoom:67%;" />
+<img src="assets/image-20220331102039258.png" alt="image-20220331102039258" style="zoom:67%;" />
 
 입력이미지의 특징을 추출, 분류하는 과정으로 동작
 
 ### Convolution Layer
 
-<img src="C:\Users\sungi\AppData\Roaming\Typora\typora-user-images\image-20220331102108989.png" alt="image-20220331102108989" style="zoom:67%;" />
+<img src="assets/image-20220331102108989.png" alt="image-20220331102108989" style="zoom:67%;" />
 
 이미지에서 어떠한 특징이 있는 지를 구하는 과정
 
@@ -28,14 +28,14 @@
 
 ### 피쳐맵의 크기 변형: Padding, Striding
 
-<img src="C:\Users\sungi\AppData\Roaming\Typora\typora-user-images\image-20220331102247070.png" alt="image-20220331102247070" style="zoom:67%;" />
+<img src="assets/image-20220331102247070.png" alt="image-20220331102247070" style="zoom:67%;" />
 
 - Padding: 원본 이미지의 상하좌우에 값이 0인 픽셀들을 한 줄씩 추가. 가장자리에 있는 것을 잘 찾을 수 있게 함
 - Striding: 필터를 이동시키는 거리(Stride) 설정
 
 ### Pooling Layer
 
-<img src="C:\Users\sungi\AppData\Roaming\Typora\typora-user-images\image-20220331102334415.png" alt="image-20220331102334415" style="zoom:67%;" />
+<img src="assets/image-20220331102334415.png" alt="image-20220331102334415" style="zoom:67%;" />
 
 이미지의 왜곡의 영향(노이즈)를 축소하는 과정
 
@@ -43,13 +43,13 @@ Max Pooling을 더 많이 씀
 
 ### Fully Connected Layer
 
-<img src="C:\Users\sungi\AppData\Roaming\Typora\typora-user-images\image-20220331102550523.png" alt="image-20220331102550523" style="zoom:67%;" />
+<img src="assets/image-20220331102550523.png" alt="image-20220331102550523" style="zoom:67%;" />
 
 추출된 특징을 사용하여 이미지를 분류
 
 ### 분류를 위한 Softmax 활성화 함수
 
-<img src="C:\Users\sungi\AppData\Roaming\Typora\typora-user-images\image-20220331103626678.png" alt="image-20220331103626678" style="zoom:67%;" />
+<img src="assets/image-20220331103626678.png" alt="image-20220331103626678" style="zoom:67%;" />
 
 마지막 계층에 Softmax 활성화 함수 사용
 
@@ -57,7 +57,7 @@ a+b+c+d+e+f=1, a,b,c,d,e,f>=0
 
 ### 정리
 
-<img src="C:\Users\sungi\AppData\Roaming\Typora\typora-user-images\image-20220331103726281.png" alt="image-20220331103726281" style="zoom:67%;" />
+<img src="assets/image-20220331103726281.png" alt="image-20220331103726281" style="zoom:67%;" />
 
 Convolution Layer는 특징을 찾아내고, Pooling Layer는 처리할 맵 크기를 줄여준다. 이를 N번 반복한다.
 
@@ -164,7 +164,7 @@ Noise canceling, Tokenizing, StopWord removal
 
 ### 워드 임베딩(Word Embedding)
 
-<img src="C:\Users\sungi\AppData\Roaming\Typora\typora-user-images\image-20220331104925019.png" alt="image-20220331104925019" style="zoom:67%;" />
+<img src="assets/image-20220331104925019.png" alt="image-20220331104925019" style="zoom:67%;" />
 
 비정형 데이터를 정형 데이터로 바꾸는 작업
 
@@ -182,13 +182,13 @@ Noise canceling, Tokenizing, StopWord removal
 
 ### Bag of Words
 
-<img src="C:\Users\sungi\AppData\Roaming\Typora\typora-user-images\image-20220331105103136.png" alt="image-20220331105103136" style="zoom:67%;" />
+<img src="assets/image-20220331105103136.png" alt="image-20220331105103136" style="zoom:67%;" />
 
 자연어 데이터에 속해있는 단어들의 가방. 요새는 Word2vec을 더 많이 사용함.
 
 ### One-hot encoding
 
-<img src="C:\Users\sungi\AppData\Roaming\Typora\typora-user-images\image-20220331105131741.png" alt="image-20220331105131741" style="zoom:67%;" />
+<img src="assets/image-20220331105131741.png" alt="image-20220331105131741" style="zoom:67%;" />
 
 학습 데이터의 모든 토큰을 크기로 한 벡터에서 해당 문장에 토큰이 존재하는지 확인
 
@@ -245,13 +245,13 @@ One-hot encoding 결과에 빈도수 정보를 추가
 
 ##### CBOW 방식
 
-<img src="C:\Users\sungi\AppData\Roaming\Typora\typora-user-images\image-20220331105545248.png" alt="image-20220331105545248" style="zoom:67%;" />
+<img src="assets/image-20220331105545248.png" alt="image-20220331105545248" style="zoom:67%;" />
 
 - 주변 단어(Context Words)로 중심 단어(Center Word)를 예측하도록 학습
 
 ##### Skip-gram 방식
 
-<img src="C:\Users\sungi\AppData\Roaming\Typora\typora-user-images\image-20220331105717077.png" alt="image-20220331105717077" style="zoom:67%;" />
+<img src="assets/image-20220331105717077.png" alt="image-20220331105717077" style="zoom:67%;" />
 
 - 중심 단어(Center Word)로 주변 단어(Context Words)를 예측하도록 학습
 
@@ -277,7 +277,7 @@ One-hot encoding 결과에 빈도수 정보를 추가
 
 ### MLP(Multi-layer Perceptron) 기반 신경망의 자연어 분류 방식
 
-<img src="C:\Users\sungi\AppData\Roaming\Typora\typora-user-images\image-20220331111230905.png" alt="image-20220331111230905" style="zoom:67%;" />
+<img src="assets/image-20220331111230905.png" alt="image-20220331111230905" style="zoom:67%;" />
 
 - 자연어 문장을 기존 MLP 모델에 적용시키기에는 한계가 있음
 
@@ -285,13 +285,13 @@ One-hot encoding 결과에 빈도수 정보를 추가
 
 ### 자연어 분류를 위한 순환 신경망(RNN)
 
-<img src="C:\Users\sungi\AppData\Roaming\Typora\typora-user-images\image-20220331111322101.png" alt="image-20220331111322101" style="zoom:67%;" />
+<img src="assets/image-20220331111322101.png" alt="image-20220331111322101" style="zoom:67%;" />
 
 - 입력 노드는 단 하나 (주로 one-hot vector 입력)
 
 ### RNN의 입출력 구조
 
-<img src="C:\Users\sungi\AppData\Roaming\Typora\typora-user-images\image-20220331111352114.png" alt="image-20220331111352114" style="zoom:67%;" />
+<img src="assets/image-20220331111352114.png" alt="image-20220331111352114" style="zoom:67%;" />
 
 - 출력 값을 두 갈래로 나누어 신경망에게 '기억'하는 기능을 부여
 
@@ -299,7 +299,7 @@ One-hot encoding 결과에 빈도수 정보를 추가
 
 ex) input: [[수업], [이], [너무], [재밌어]] label: [1] (0: 부정, 1: 긍정)
 
-<img src="C:\Users\sungi\AppData\Roaming\Typora\typora-user-images\image-20220331111517279.png" alt="image-20220331111517279" style="zoom:67%;" />
+<img src="assets/image-20220331111517279.png" alt="image-20220331111517279" style="zoom:67%;" />
 
 - 뒤로 가면서 이전의 요소들을 고려하여 뒤의 내용들을 예측
 - 이전 데이터를 현재 데이터의 계산에 반영
