@@ -241,6 +241,7 @@ dataset = dataset.batch(32)
 
 - `units`: 레이어 안의 node의 수
 - `activation`: 적용할 activation 함수 설정 (`sigmoid`, `relu`, `softmax`, `tanh` ...)
+- `input_shape` / `input_dim`
 
 
 
@@ -287,7 +288,7 @@ model.add(tf.keras.layers.Dense(1, activation='sigmoid'))
 `[model].compile(optimizer, loss, metrics)` [문서](https://www.tensorflow.org/api_docs/python/tf/keras/Sequential#compile)
 
 - `optimizer`: 모델 학습 최적화 방법 (adam, ...)
-- `loss`: 손실 함수 설정 (mse, ...)
+- `loss`: 손실 함수 설정 (mse, binary_crossentropy, categorical_crossentropy, sparse_categorical_crossentropy, ...)
 - `metrics`: 평가 방법 (binary_accuracy, binary_crossentropy, accuracy...)
   - `binary_crossentropy`: 두 확률 분포간의 차이를 측정하는 손실 함수
 

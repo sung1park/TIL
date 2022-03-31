@@ -80,7 +80,7 @@ SGD는 gradient 값 계산 시, mini-batch에 따라 gradient 방향의 변화�
 
 과거에 이동했던 방식을 기억하면서 그 방향으로 일정 정도를 추가적으로 이동하는 방식
 
-##### Scikit-learn을 이용해 SGD에서 momentum 사용하기
+##### Keras를 이용해 SGD에서 momentum 사용하기
 
 `tf.keras.optimizers.SGD(lr, momentum)`
 
@@ -93,7 +93,7 @@ SGD는 gradient 값 계산 시, mini-batch에 따라 gradient 방향의 변화�
 
 과거의 기울기를 제곱해서 계속 더하기 때문에 학습이 진행될수록 갱신 강도가 약해짐
 
-##### Scikit-learn을 이용한 Adagrad
+##### Keras를 이용한 Adagrad
 
 `tf.keras.optimizers.Adagrad(lr, epsilon, decay)` [문서](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/Adagrad)
 
@@ -117,7 +117,7 @@ SGD는 gradient 값 계산 시, mini-batch에 따라 gradient 방향의 변화�
 
 <u>Momentum + RMSprop</u> 가장 발전된 최적화 알고리즘
 
-##### Scikit-learn을 이용한 Adam
+##### Keras를 이용한 Adam
 
 `tf.keras.optimizers.Adam(lr, beta_1, beta_2)` [문서](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/Adam)
 
@@ -247,7 +247,7 @@ $$
 - 작은 가중치들이 거의 0으로 수렴하여 몇 개의 중요한 가중치들만 남음
 - **Sparse Model을 만든다**라고도 함
 
-##### Scikit-learn을 이용한 L1 정규화
+##### Keras를 이용한 L1 정규화
 
 `tf.keras.layers.Dense(kernel_regularizer=tf.keras.regularizers.l1(ratio))`
 
@@ -263,7 +263,7 @@ $$
 - L1 정규화에 비하여 0으로 수렴하는 가중치가 적음. 큰 값을 가진 가중치를 더욱 제약하는 효과
 - 특정 가중치에 치중되지 않도록 가중치 값을 조율하게 되며 **가중치 감쇠** (**Weight Decay**)라고도 부름
 
-##### Scikit-learn을 이용한 L2 정규화
+##### Keras를 이용한 L2 정규화
 
 `tf.keras.layers.Dense(kernel_regularizer=tf.keras.regularizers.l1\2(ratio))`
 
@@ -286,7 +286,7 @@ $$
 - drop된 뉴런은 backpropagation 때 신호를 차단
 - Test 때는 모든 뉴런에 신호를 전달
 
-### Scikit-learn을 이용한 드롭 아웃
+### Keras를 이용한 드롭 아웃
 
 `tf.keras.layers.Dropout(prob)`
 
@@ -310,7 +310,7 @@ Normalization을 처음 Input data 뿐만 아니라 신경망 내부 Hidden Laye
 - 과적합 억제(Dropout, L1,L2 정규화 필요성 감소)
 - 핵심은 <u>학습 속도의 향상</u>
 
-### Scikit-learn을 이용한 배치 정규화
+### Keras를 이용한 배치 정규화
 
 `tf.keras.layers.BatchNormalization()`: 배치 정규화 레이어
 
