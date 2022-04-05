@@ -18,10 +18,25 @@ $ pip install requests
 import requests
 requests.get(주소)
 requests.get(주소).text
+requests.get(주소).content
 requests.get(주소).status_code
 ```
 
 - get을 했을때 돌아오는 숫자에 따라 의미가 다르다. 200번대의 경우 원활하게 요청과 응답이 되었다는 뜻이고, 400번대의 경우 클라이언트의 요청에 문제가 있다는 뜻, 500번대의 경우 서버에 문제가 있다는 의미이다.
+
+##### params 이용하기
+
+```python
+url = 'https://search.naver.com/search.naver'
+params = {
+    'where': 'news',
+    'query': '코로나',
+    'start': 2
+}
+requests.get(url=url, params=params)
+```
+
+- query문을 포함한 긴 url 대신 dictionary 형태의 params를 전달해 줄 수 있다.
 
 
 

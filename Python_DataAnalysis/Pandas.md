@@ -104,8 +104,6 @@ country.loc['japan':'korea', :'population'] # 행(Index), 열(Column)
 
 - 기존의 인덱싱과 달리 끝범위([start:end]에서 end)를 포함
 
-
-
 ##### .iloc (integer-location)
 
 파이썬 스타일 정수 인덱스 인덱싱/슬라이싱
@@ -126,6 +124,18 @@ dataframe = pd.DataFrame(columns=['이름', '나이', '주소'])
 dataframe.loc[0] = ['박성일', '28', '서울']
 dataframe.loc[1] = {'이름': '일성', '나이': 26, '주소': '안양'}
 dataframe.loc[1, '이름'] = '박성'
+```
+
+
+
+### 행, 열 삭제
+
+```python
+# 행 삭제
+dataframe.drop(1)
+# 열 삭제
+dataframe.drop('열 이름', axis=1)
+del dataframe['열 이름']
 ```
 
 
@@ -154,11 +164,55 @@ dataframe[['이름', '주소', '나이']]
 
 
 
+### 형 변환하기
+
+```python
+dataframe.astype(int)
+dataframe.str.replace(',', '').astype(int)
+```
+
+
+
+### 문자 교체
+
+```python
+dataframe.str.replace(old, new)
+```
+
+- `str`을 써줘야 함
+
+
+
+### 각 칼럼의 데이터 통계 확인하기
+
+```python
+dataframe.describe()
+```
+
+- `include=all`
+
+
+
+### 변수들의 상관관계
+
+```python
+dataframe.corr()
+
+# seaborn을 이용해 heatmap 그리기
+fig = plt.figure(figsize=[20,20])
+ax = sns.heatmap(train.corr(),annot=True,square=True)
+```
+
+- 0.3 이상이면 상관관계가 높은 편으로 판단
+
+
+
 ### 누락된 데이터 체크
 
 ```python
 dataframe.isnull()
 dataframe.notnull()
+dataframe.info()
 ```
 
 - boolean 형식으로 변환하여 확인

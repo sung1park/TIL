@@ -192,3 +192,19 @@ y_pred = pd.Series(
 pd.crosstab(y_true, y_pred, rownames=['실제'], colnames=['예측'], margins=True)
 ```
 
+
+
+### melt
+
+`pandas.melt(frame, id_vars=None, value_vars=None, var_name=None, value_name='value', col_level=None, ignore_index=True)`[문서](https://pandas.pydata.org/docs/reference/api/pandas.melt.html)
+
+
+
+### One-hot encoding
+
+```python
+season = pd.get_dummies(df['season'], prefix='season')
+df = pd.concat([df, season], axis=1)
+```
+
+- `get_dummies`를 이용해 인코딩 결과물 생성
