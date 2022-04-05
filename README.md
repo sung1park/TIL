@@ -104,3 +104,5 @@
 - [TensorFlow](./AI_ML_DL/Tensorflow.md)
 - [딥러닝 모델 학습의 문제점](./AI_ML_DL/Deep_Learning_Problems.md)
 - [다양한 분야의 딥러닝 모델](./AI_ML_DL/Various_Deep_Learning_Models.md)
+- [이미지 데이터 이해](./AI_ML_DL/Image_Data.md)
+- [PIL](./AI_ML_DL/PIL.md)
