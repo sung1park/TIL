@@ -106,3 +106,5 @@
 - [다양한 분야의 딥러닝 모델](./AI_ML_DL/Various_Deep_Learning_Models.md)
 - [이미지 데이터 이해](./AI_ML_DL/Image_Data.md)
 - [PIL](./AI_ML_DL/PIL.md)
+- [CNN](./AI_ML_DL/CNN.md)
+- [RNN](./AI_ML_DL/RNN.md)
