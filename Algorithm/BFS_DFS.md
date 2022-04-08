@@ -29,6 +29,27 @@ BFS(G, v)
 	}
 ```
 
+##### Python
+
+```python
+def BFS(graph, root):
+    visited = set([root])
+    search = []
+    queue = deque([root])
+    
+    while queue:
+        cur = queue.popleft()
+        search.append(cur)
+        for node in graph[cur]:
+            if node not in visited:
+                queue.append(node)
+                visited.add(node)
+    
+    return search
+```
+
+
+
 
 
 ## DFS
@@ -46,5 +67,41 @@ DFS(v)
 	for each all w in adjacency(G, v)
 		if visited[w] != true
 			DFS(w)
+```
+
+##### Python
+
+```python
+def DFS(graph, start_node):
+    visit = [start_node]
+    stack = []
+    
+    stack.append(start_node)
+    cur = start_node
+    
+    while stack:
+        for node in graph[cur]:
+            if node not in visited:
+                stack.append(node)
+                visited.append(node)
+                cur = node
+                break
+        else:
+            stack.pop()
+            if stack: 
+                cur = stack[-1]
+
+	return visited
+```
+
+```python
+visited = []
+
+def DFS(graph, cur):
+    global visited
+    if cur not in visited:
+        visited.append(cur)
+        for node in graph[cur]:
+            DFS(graph, node)
 ```
 

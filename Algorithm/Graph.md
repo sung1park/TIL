@@ -52,6 +52,27 @@
 각 정점의 노드 수 = 정점의 진출 차수
 ```
 
+##### python
+
+```python
+class AdjNode:
+    def __init__(self, vertex, value):
+        self.vertex = vertex  # 노드의 번호 
+        self.value = value  # 시작 정점에서의 가중치
+        self.next = None  # 다음 노드
+```
+
+```python
+class Graph:
+    def __init__(self, num):
+        self.V = num  # 정점의 개수
+        self.graph = [None] * self.V  #그래프
+    
+    def add_edge(self, s, d, w):
+        node = AdjNode(d)
+        node.next = self
+```
+
 
 
 #### 간선 리스트
