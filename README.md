@@ -56,7 +56,7 @@
 - [그래프](./Algorithm/Graph.md)
 - [힙 / 우선순위 큐](./Algorithm/Heap&Priority_Queue.md)
 - [서로소 집합](./Algorithm/Disjoint_Set.md)
-- [최소 스패닝 트리](./Algorithm/Minimum_Spanning_Tree.md)
+- [최소 신장 트리](./Algorithm/Minimum_Spanning_Tree.md)
 - [최단 경로](./Algorithm/Shortest_Path.md)
 - [다이나믹 프로그래밍1](./Algorithm/Dynamic_Programming_1.md)
 - [다이나믹 프로그래밍2](./Algorithm/Dynamic_Programming_2.md)
