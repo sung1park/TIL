@@ -282,3 +282,72 @@ B = np.transpose(A)
 ```python
 print(np.linalg.inv(A))
 ```
+
+
+
+### 다항식과 미분
+
+`np.poly1d()` [문서](https://numpy.org/doc/stable/reference/generated/numpy.poly1d.html)
+
+```python
+p = np.poly1d([1, 2, 2]) # 다항식 인스턴스 생성
+
+print(p) # 다항식
+p(0.5) # 0.5에서의 함수값
+p.r # 다항식의 해
+p.c # 계수 출력
+q = p.deriv() # 미분함수 선언
+```
+
+
+
+## Gradient Descent
+
+> 경사하강법
+
+<u>목적 함수</u>의 최소화를 목표로 최소값을 찾아가는 방법
+
+![image-20220413145128337](assets/image-20220413145128337.png)
+
+- step size가 너무 크면 최소값으로 수렴되지 않음
+- step size가 너무 작으면 수렴하는데 오래 걸림
+
+
+
+### Gradient Descent를 사용하는 이유
+
+1. 실제 분석에서 마주하는 함수는 굉장히 복잡하고, 2차원 그림으로 표현하지 못하는 고차원 함수들이 많음
+2. 미분 계수를 컴퓨터로 구할 때 gradient descent가 더 편함
+3. 데이터가 많을 때는 계산량 측면에서 더 효율적
+
+
+
+### 예시 코드
+
+그림의 (x, y)를 예측하는 함수 만들기. 주어진 x에 대응되는 y 예측하기
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.random.rand(100)
+y = 0.7 * x
+
+# Y = Wx + b
+W = np.random.uniform(0,1)
+b = np.random.uniform(0,1)
+
+step_size = 0.5
+
+for epoch in range(100):
+    y_pred = W*x + b
+    
+    objective = np.abs(y_pred-y).mean()
+    
+    w_grad = step_size * ((y_pred-y)*x).mean()
+    b_grad = step_size * (y_pred-y).mean()
+    
+    W = W - w_grad
+    b = b - b_grad
+```
+

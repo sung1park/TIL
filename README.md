@@ -87,7 +87,7 @@
 
 #### Python Data Analysis
 
-- [Numpy 알아보기](./Python_DataAnalysis/NumPy.md)
+- [Numpy](./Python_DataAnalysis/NumPy.md)
 - [Pandas 기초](./Python_DataAnalysis/Pandas.md)
 - [Pandas 심화](./Python_DataAnalysis/Pandas_advanced.md)
 - [Matplotlib](./Python_DataAnalysis/Matplotlib.md)
