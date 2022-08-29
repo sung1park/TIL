@@ -129,3 +129,17 @@ $ git pull origin master
 
 
 
+### Error
+
+##### error: src refspec master does not match any
+
+- 원인: master 브랜치가 없어서 발생
+
+- 해결
+
+  ```bash
+  git checkout -b 'master'
+  git push origin master
+  ```
+
+  
