@@ -152,3 +152,17 @@ for i in range(1<<n):
         if i & (1<<j):
             pass
 ```
+
+
+
+### Deepcopy for 2-dim (or more) array
+
+```python
+# Slicing
+arr_copy = arr_origin[:][:]
+
+# Using a module
+import copy
+arr_copy = copy.deepcopy(arr_origin)
+```
+
