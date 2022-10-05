@@ -142,3 +142,13 @@ a, b가 정수이고, a를 b로 나눈 나머지가 r이라고 할 때, a와 b�
 이 때, 최대공약수는 36이다.
 ```
 
+
+
+### Binary counting for Python
+
+```python
+for i in range(1<<n):
+    for j in range(n):
+        if i & (1<<j):
+            pass
+```
