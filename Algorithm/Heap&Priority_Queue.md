@@ -61,9 +61,23 @@
 
   
 
-#### java.util.PriorityQueue
+#### Java - java.util.PriorityQueue
 
   - 원소들의 natural ordering에 따라 heap을 유지
   - Comparable 인터페이스를 구현함으로써 기준을 세울 수 있음
 
-  
+
+
+#### Python - heapq
+
+```python
+import heapq
+
+pq = []
+
+heapq.heappush(pq, 1)
+print(heapq.heappop(pq))
+```
+
+- 기본적으로 heapq는 min heap
+- max heap으로 사용하기 위해서는 value에 -1을 곱해서 넣고 빼기

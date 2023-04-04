@@ -166,3 +166,25 @@ import copy
 arr_copy = copy.deepcopy(arr_origin)
 ```
 
+
+
+### 2차원 배열의 원소 최대값 구하기
+
+```python
+max_val = max(map(max, arr))
+```
+
+- `map`을 사용하면 간단하게 구할 수 있다
+
+
+
+### List의 index 구하기
+
+- 찾는 원소가 없을 경우 `-1`을 값을 갖도록 하려면 아래와 같이 `try~except` 구문을 사용할 수도 있다
+
+```python
+try:
+    index = arr.index(e)
+except ValueError:
+    index = -1
+```
